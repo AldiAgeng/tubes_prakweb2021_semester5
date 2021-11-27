@@ -8,13 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {{ ($active === 'home') ? 'active' : '' }}" href="/">Home</a>
+            <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active === 'posts') ? 'active' : '' }}" href="/posts">Blog</a>
+            <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active === 'categories') ? 'active' : '' }}" href="/categories">Categories</a>
+            <a class="nav-link {{ Request::is('login*') ? 'active' : '' }}" href="/login">Login</a>
           </li>
         </ul>
         <form class="d-flex search">

@@ -21,7 +21,7 @@
       <h1 class="fw-bold">Review {{ $posts[0]->title }}</h1>
       <ul class="mt-4 fw-bold">
         <li><i class="bi bi-calendar3"></i> {{ $posts[0]->created_at->diffForHumans() }}</li>
-        <li><i class="bi bi-people"></i> {{ $posts[0]->author->name }}</li>
+        <li><a class="text-decoration-none text-dark" href="/posts?author={{ $posts[0]->author->username }}"><i class="bi bi-people"></i> {{ $posts[0]->author->name }}</a></li>
         {{-- <!-- <li><i class="bi bi-eye"></i> 15k Views</li> --}}
       </ul>
       <p class="mt-4 mb-4">{{ $posts[0]->excerpt }}</p>
