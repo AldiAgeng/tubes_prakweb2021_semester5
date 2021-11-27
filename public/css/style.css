@@ -26,8 +26,8 @@
 }
 
 .button {
-    border: 2px solid #5243B8;
-    color: #5243B8;
+    border: 2px solid #5243b8;
+    color: #5243b8;
     height: 36px;
     width: 120px;
     border-radius: 30px 0 30px 30px;
@@ -37,8 +37,8 @@
 }
 
 .button:hover {
-    background-color: #5243B8;
-    color: #F9F9FB;
+    background-color: #5243b8;
+    color: #f9f9fb;
 }
 
 .keterangan ul li {
@@ -65,16 +65,16 @@
 .category button {
     width: 78px;
     height: 38px;
-    background-color: #F9F9FB;
+    background-color: #f9f9fb;
     margin-right: 3px;
-    box-shadow: 2px 2px #F9F9FB;
+    box-shadow: 2px 2px #f9f9fb;
     border-radius: 20px;
     font-size: 15px;
 }
 
 .category button:hover {
-    background-color: #5243B8;
-    color: #F9F9FB;
+    background-color: #5243b8;
+    color: #f9f9fb;
 }
 
 .body {
@@ -95,7 +95,7 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    transition: .6s ease-out;
+    transition: 0.6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     margin-right: 5px;
@@ -116,7 +116,7 @@
 }
 
 .single-team::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -165,7 +165,7 @@
     .kotak {
         width: 572px;
         height: 289px;
-        background-color: #5243B8;
+        background-color: #5243b8;
         right: 0;
         border-radius: 100px 0 0;
         position: absolute;
@@ -181,9 +181,9 @@
     }
 
     .nav-link:hover::after {
-        content: '';
+        content: "";
         display: block;
-        border-bottom: 3px solid #5243B8;
+        border-bottom: 3px solid #5243b8;
         width: 70%;
         margin-left: 1px;
         padding-bottom: 5px;
@@ -202,7 +202,7 @@
     .card-pembungkus {
         height: 546px;
         width: 1125px !important;
-        background-color: #F9F9FB;
+        background-color: #f9f9fb;
         position: relative;
         right: 30px;
         border-radius: 15px 120px 10px 15px;
@@ -250,8 +250,8 @@
     }
 
     .category button:hover {
-        background-color: #5243B8;
-        color: #F9F9FB;
+        background-color: #5243b8;
+        color: #f9f9fb;
     }
 
     .single-team {
