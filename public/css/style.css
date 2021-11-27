@@ -162,15 +162,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    .kotak {
-        width: 572px;
-        height: 289px;
-        background-color: #5243B8;
-        right: 0;
-        border-radius: 100px 0 0;
-        position: absolute;
-    }
-
     .navbar-brand {
         padding: 0 80px 0 90px;
         font-size: 50px;

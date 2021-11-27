@@ -1,6 +1,5 @@
-<div class="kotak"></div>
   <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong">
-    <div class="container-fluid mt-3 mb-1">
+    <div class="container-fluid mt mb-1">
       <a class="navbar-brand" href="/">Logo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
