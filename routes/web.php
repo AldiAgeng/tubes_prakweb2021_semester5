@@ -24,6 +24,8 @@ use App\Models\User;
 
 Route::get('/', function () {
     return view('home', [
+        'posts' => Post::latest()->get(),
+        'categories' => Category::all(),
         'title' => 'Home',
         'active' => 'home'
     ]);
