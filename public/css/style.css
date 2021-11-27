@@ -18,3 +18,249 @@
     border-radius: 0;
     margin-bottom: -1px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Dubai;
+}
+
+.button {
+    border: 2px solid #5243B8;
+    color: #5243B8;
+    height: 36px;
+    width: 120px;
+    border-radius: 30px 0 30px 30px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: transparent;
+}
+
+.button:hover {
+    background-color: #5243B8;
+    color: #F9F9FB;
+}
+
+.keterangan ul li {
+    display: inline-block;
+    padding-right: 68px;
+    margin-left: -30px;
+}
+
+.rating p {
+    display: inline;
+    padding-left: 10px;
+}
+
+.gambar img {
+    width: 157px;
+    height: 227px;
+    border-radius: 0 20px 0 5px;
+}
+
+.keterangan {
+    bottom: 5px;
+}
+
+.category button {
+    width: 78px;
+    height: 38px;
+    background-color: #F9F9FB;
+    margin-right: 3px;
+    box-shadow: 2px 2px #F9F9FB;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.category button:hover {
+    background-color: #5243B8;
+    color: #F9F9FB;
+}
+
+.body {
+    margin-left: -30px;
+}
+
+.team-area {
+    display: flex;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.single-team {
+    width: 260px;
+    height: 300px;
+    padding: 24px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s ease-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.single-team:hover {
+    transform: translateY(5px);
+}
+
+.single-team:hover::before {
+    opacity: 1;
+}
+
+.single-team:hover .team-text {
+    opacity: 1;
+    transform: translateY(0);
+    border-radius: 5px;
+}
+
+.single-team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.single-team img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.single-team .team-text {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.team-text h2 {
+    margin: 0;
+    font-family: Dubai;
+    letter-spacing: 3px;
+}
+
+.team-text p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 992px) {
+    .kotak {
+        width: 572px;
+        height: 289px;
+        background-color: #5243B8;
+        right: 0;
+        border-radius: 100px 0 0;
+        position: absolute;
+    }
+
+    .navbar-brand {
+        padding: 0 80px 0 90px;
+        font-size: 50px;
+    }
+
+    .nav-item {
+        padding-left: 60px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #5243B8;
+        width: 70%;
+        margin-left: 1px;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .search {
+        padding-right: 270px;
+        color: #ffff;
+    }
+
+    .col-search {
+        opacity: 50%;
+    }
+
+    .card-pembungkus {
+        height: 546px;
+        width: 1125px !important;
+        background-color: #F9F9FB;
+        position: relative;
+        right: 30px;
+        border-radius: 15px 120px 10px 15px;
+    }
+
+    .isi {
+        padding-left: 80px;
+        margin-left: 80px;
+    }
+
+    .keterangan {
+        padding-top: 80px;
+        position: relative;
+        left: 0;
+        margin-left: -70px;
+    }
+
+    .keterangan ul li {
+        display: inline-block;
+        padding-right: 68px;
+        margin-left: -30px;
+    }
+
+    .isi p {
+        opacity: 60%;
+    }
+
+    .gambar img {
+        width: 407px;
+        height: 546px;
+        border-radius: 0 120px 10px 120px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .title {
+        padding-top: 50px;
+    }
+
+    .category button {
+        width: 108px;
+        height: 41px;
+        margin-right: 10px;
+    }
+
+    .category button:hover {
+        background-color: #5243B8;
+        color: #F9F9FB;
+    }
+
+    .single-team {
+        width: 360px;
+        height: 400px;
+        margin-right: 50px;
+    }
+
+    .body {
+        margin-left: 20px;
+    }
+}
