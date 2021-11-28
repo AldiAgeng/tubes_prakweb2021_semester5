@@ -45,8 +45,8 @@
   {{-- END Category --}}
 
   {{-- Posts --}}
-  <div class="team-area mt-5">
-    <h1 class="title">New Review</h1>
+  <h1 class="title mt-3">New Review</h1>
+  <div class="team-area mt-3">
     {{-- @foreach ($posts->skip(1) as $post)         --}}
     <div class="single-team">
       @if ($posts[1]->image)
