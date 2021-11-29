@@ -10,33 +10,35 @@
   </div>
 @endif
 
-<div class="table-responsive col-lg-6">
-  <a href="/dashboard/categories/create" class="btn btn-primary mb-3">Create new category</a>
-    <table class="table table-striped table-sm">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Category Name</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach ($categories as $category)
-        <tr>
-          <td>{{ $loop->iteration }}</td>
-          <td>{{ $category->name }}</td>
-          <td>
-              <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <form action="/dashboard/categories/{{ $category->slug }}" method="post" class="d-inline">
-                @method('delete')
-                @csrf
-                <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
-              </form>
-          </td>
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
+<a href="/dashboard/categories/create" class="btn btn-primary mb-3">Create new category</a>
+<div class="card col-lg-6">
+      <div class="table-responsive">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Action</th>
+                  </tr>
+              </thead>
+              <tbody class="customtable">
+                @foreach ($categories as $category)
+                  <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $category->name }}</td>
+                      <td>
+                        <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                        <form action="/dashboard/categories/{{ $category->slug }}" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
+                        </form>
+                      </td>
+                  </tr>
+                @endforeach
+              </tbody>
+          </table>
+      </div>
   </div>
 </div>
 @endsection

@@ -8,7 +8,7 @@
   
 <div class="row">
   <div class="col mt-2">
-    <a class="text-decoration-none text-dark" href="/dashboard/posts">
+    <a class="text-decoration-none text-dark" href="/dashboard/all_posts">
       <div class="card">
           <div class="card-body text-center">
             <i class="bi bi-file-text" style="font-size:4em;"></i>
