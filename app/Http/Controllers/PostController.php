@@ -9,15 +9,16 @@ use \App\Models\User;
 
 class PostController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
         $title = '';
-        if(request('category')){
+        if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
             $title = 'in ' . $category->name;
         }
 
-        if(request('author')){
+        if (request('author')) {
             $author = User::firstWhere('username', request('author'));
             $title = 'by ' . $author->name;
         }
@@ -28,7 +29,8 @@ class PostController extends Controller
         ]);
     }
 
-    public function show(Post $post){
+    public function show(Post $post)
+    {
         return view('post', [
             'title' => 'Single Post',
             'post' => $post

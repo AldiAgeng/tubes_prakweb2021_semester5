@@ -21,7 +21,7 @@
     </h6>
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link {{ Request::is('dashboard/all_posts*') ? 'active' : '' }}" href="/dashboard/all_posts">
           <span data-feather="file-text"></span>
           All Post
         </a>

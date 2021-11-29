@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminAllPostsController;
 use App\Http\Controllers\DashboardPostController;
 use App\Models\Post;
 use App\Models\User;
@@ -36,7 +37,7 @@ Route::get('/posts', [PostController::class, 'index']);
 // halaman single post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/categories', function(){
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
         'categories' => Category::all()
@@ -51,8 +52,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function(){
-    return view('dashboard.index',[
+Route::get('/dashboard', function () {
+    return view('dashboard.index', [
         'posts' => Post::all(),
         'categories' => Category::all(),
         'user' => User::all()->where('is_admin', 0),
@@ -65,3 +66,5 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 
 Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except('show')->middleware('admin');
