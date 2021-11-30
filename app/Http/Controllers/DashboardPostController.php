@@ -54,7 +54,7 @@ class DashboardPostController extends Controller
             'body' => 'required'
         ]);
 
-        if($request->file('image')){
+        if($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
