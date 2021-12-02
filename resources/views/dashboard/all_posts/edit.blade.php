@@ -5,21 +5,21 @@
 </div>
 
 <div class="col-md-8">
-  <form method="post" action="/dashboard/all_posts/{{ $post->slug }}" class="mb-5" enctype="multipart/form-data">
+  <form method="post" action="/dashboard/all_posts/{{ $all_post->slug }}" class="mb-5" enctype="multipart/form-data">
     @method('put')
     @csrf
-      <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
-        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
-        @error('title')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
-        @enderror
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ @old('title', $all_post->title) }}">
+      @error('title')
+      <div class="invalid-feedback">
+        {{ $message }}
       </div>
+      @enderror
+    </div>
       <div class="mb-3">
         <label for="slug" class="form-label">Slug</label>
-        <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $post->slug)  }}">
+        <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $all_post->slug)  }}">
         @error('slug')
         <div class="invalid-feedback">
           {{ $message }}
@@ -30,7 +30,7 @@
         <label for="category" class="form-label">Category</label>
         <select class="form-select" name="category_id" id="category">
           @foreach ($categories as $category)
-          @if(old('category_id', $post->category_id) == $category->id)
+          @if(old('category_id', $all_post->category_id) == $category->id)
           <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
           @else
           <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -41,9 +41,9 @@
 
       <div class="mb-3">
           <label for="image" class="form-label">Post Image</label>
-          <input type="hidden" name="oldImage" value="{{ $post->image }}">
-          @if ($post->image)
-              <img src="{{ asset('storage/' .$post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+          <input type="hidden" name="oldImage" value="{{ $all_post->image }}">
+          @if ($all_post->image)
+              <img src="{{ asset('storage/' .$all_post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
           @else
               <img class="img-preview img-fluid mb-3 col-sm-5">
           @endif
@@ -60,7 +60,7 @@
           @error('body')
             <p class="text-danger">{{ $message }}</p>
           @enderror
-              <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
+              <input id="body" type="hidden" name="body" value="{{ old('body', $all_post->body) }}">
               <trix-editor input="body"></trix-editor>         
         </div>
       
