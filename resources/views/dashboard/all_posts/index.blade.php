@@ -10,7 +10,6 @@
   </div>
 @endif
 
-<a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
 <div class="card col-lg-10">
       <div class="table-responsive">
           <table class="table">
