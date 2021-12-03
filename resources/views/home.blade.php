@@ -13,7 +13,7 @@
     @else
     <div class="gambar">
         {{-- <img src="../img/sriasih.jpg" class="float-start" alt=""> --}}
-      <img src="https://source.unsplash.com/500x400?{{ $posts[0]->category->name }}" class="float-start" alt="{{ $posts[0]->category->name }}">
+      <img src="https://source.unsplash.com/600x800?{{ $posts[0]->category->name }}" class="float-start" alt="{{ $posts[0]->category->name }}">
     </div>
     @endif
 

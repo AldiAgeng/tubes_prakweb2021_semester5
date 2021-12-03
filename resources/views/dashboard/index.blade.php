@@ -34,7 +34,7 @@
       <div class="card">
           <div class="card-body text-center">
             <i class="bi bi-people" style="font-size:4em;"></i>
-            <p class="card-text">Users</p>
+            <p class="card-text">User</p>
             <h5 class="card-title">Total: {{ $user->count() }}</h5>
           </div>
         </div>
