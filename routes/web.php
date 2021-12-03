@@ -1,16 +1,17 @@
 <?php
 
 
+use App\Models\Post;
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\AdminAllPostsController;
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
-use App\Models\Post;
-use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,3 +70,5 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 
 Route::get('/dashboard/all_posts/checkSlug', [AdminAllPostsController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except('show')->middleware('admin');
+
+Route::resource('/dashboard/users', AdminUsersController::class)->except('show')->middleware('admin');
