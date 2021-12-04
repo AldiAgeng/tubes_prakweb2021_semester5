@@ -26,7 +26,7 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.users.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class AdminUsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

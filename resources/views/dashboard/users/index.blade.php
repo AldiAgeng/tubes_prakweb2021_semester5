@@ -10,7 +10,7 @@
   </div>
 @endif
 
-<a href="#" class="btn btn-primary mb-3">Create new user</a>
+<a href="/dashboard/users/create" class="btn btn-primary mb-3">Create new user</a>
 <div class="card col-lg-8">
       <div class="table-responsive">
           <table class="table">
