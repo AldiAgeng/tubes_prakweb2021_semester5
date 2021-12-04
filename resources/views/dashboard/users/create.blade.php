@@ -53,14 +53,14 @@
           <label for="category" class="form-label">Is Admin?</label>
           <select class="form-select" name="is_admin" id="is_admin">
             @if(old('is_admin') == 0)
-            <option value="{{ "0" }}" selected>No</option>
-            <option value="{{ "1" }}">Yes</option>
+            <option value="{{ 0 }}" selected>No</option>
+            <option value="{{ 1 }}">Yes</option>
             @elseif (old('is_admin') == 1)
-            <option value="{{ "0" }}">No</option>
-            <option value="{{ "1" }}" selected>Yes</option>
+            <option value="{{ 0 }}">No</option>
+            <option value="{{ 1 }}" selected>Yes</option>
             @else
-            <option value="{{ "0" }}">No</option>
-            <option value="{{ "1" }}">Yes</option>
+            <option value="{{ 0 }}">No</option>
+            <option value="{{ 1 }}">Yes</option>
             @endif
           </select>
         </div>
