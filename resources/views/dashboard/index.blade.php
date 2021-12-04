@@ -30,7 +30,7 @@
     </a>
   </div>
   <div class="col mt-2">
-    <a class="text-decoration-none text-dark" href="/dashboard/posts">
+    <a class="text-decoration-none text-dark" href="/dashboard/users">
       <div class="card">
           <div class="card-body text-center">
             <i class="bi bi-people" style="font-size:4em;"></i>
@@ -41,7 +41,7 @@
     </a>
   </div>
   <div class="col mt-2">
-    <a class="text-decoration-none text-dark" href="/dashboard/posts">
+    <a class="text-decoration-none text-dark" href="/dashboard/users">
       <div class="card">
           <div class="card-body text-center">
             <i class="bi bi-person-check" style="font-size:4em;"></i>
