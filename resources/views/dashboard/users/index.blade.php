@@ -39,11 +39,12 @@
                       
                       <td>
                         <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
-                        <form action="#" method="post" class="d-inline">
-                        @method('delete')
-                        @csrf
-                        <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
-                        </form>
+
+                        <form action="/dashboard/users/{{ $user->id }}" method="post" class="d-inline">
+                          @method('delete')
+                          @csrf
+                          <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
+                          </form>
                       </td>
                   </tr>
                 @endforeach

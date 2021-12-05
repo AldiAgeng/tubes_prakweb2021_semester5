@@ -98,6 +98,10 @@ class AdminUsersController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy($user->id);
+
+        return redirect('/dashboard/users')->with('success', 'User has been deleted');
+
+      
     }
 }

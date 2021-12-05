@@ -72,3 +72,4 @@ Route::get('/dashboard/all_posts/checkSlug', [AdminAllPostsController::class, 'c
 Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except('show')->middleware('admin');
 
 Route::resource('/dashboard/users', AdminUsersController::class)->except('show')->middleware('admin');
+
