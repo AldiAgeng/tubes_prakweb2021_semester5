@@ -89,14 +89,14 @@ class AdminAllPostsController extends Controller
         ];
 
 
-        if($request->slug != $all_post->slug){
+        if ($request->slug != $all_post->slug) {
             $rules['slug'] = 'required|unique:posts';
         }
 
         $validatedData = $request->validate($rules);
 
-        if($request->file('image')){
-            if($request->oldImage){
+        if ($request->file('image')) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
             $validatedData['image'] = $request->file('image')->store('post-images');
@@ -105,10 +105,10 @@ class AdminAllPostsController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
-        
+
         Post::where('id', $all_post->id)
             ->update($validatedData);
-        
+
         return redirect('/dashboard/all_posts')->with('success', 'Post has been updated');
     }
 
@@ -118,13 +118,16 @@ class AdminAllPostsController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Post $all_posts)
     {
-        //
+        Post::destroy($all_posts->id);
+
+        return redirect('/dashboard/all_posts')->with('success', 'Post has been deleted');
     }
 
-     // SLugable
-    public function checkSlug(Request $request){
+    // SLugable
+    public function checkSlug(Request $request)
+    {
         $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
     }
