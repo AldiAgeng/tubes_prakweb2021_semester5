@@ -75,7 +75,9 @@ class AdminUsersController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('dashboard.users.edit', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -102,6 +104,5 @@ class AdminUsersController extends Controller
 
         return redirect('/dashboard/users')->with('success', 'User has been deleted');
 
-      
     }
 }
