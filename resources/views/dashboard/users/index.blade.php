@@ -38,9 +38,9 @@
                       @endif
                       
                       <td>
-                        <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+                        <a href="/dashboard/users/{{ $user->username }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
 
-                        <form action="/dashboard/users/{{ $user->id }}" method="post" class="d-inline">
+                        <form action="/dashboard/users/{{ $user->username }}" method="post" class="d-inline">
                           @method('delete')
                           @csrf
                           <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
