@@ -6,7 +6,7 @@
 
 
 <div class="col-md-8">
-    <form method="post" action="#" class="mb-5">
+    <form method="post" action="/dashboard/users/{{ $user->username }}" class="mb-5">
       @method('put')
       @csrf
         <div class="mb-3">

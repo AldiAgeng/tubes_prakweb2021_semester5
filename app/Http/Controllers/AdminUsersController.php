@@ -89,7 +89,24 @@ class AdminUsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $rules = [
+            'name' => 'required|max:255',
+            'is_admin' => 'required'
+        ];
+
+        if ($request->username != $user->usename && $request->email != $user->email) {
+            $rules = [
+                'username' => ['required', 'min:3', 'max:255', 'unique:users'],
+                'email' => 'required|email:dns|unique:users',
+            ];
+        }
+
+        $validatedData = $request->validate($rules);
+
+        User::where('id', $user->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/users')->with('success', 'User has been updated!');
     }
 
     /**
@@ -103,6 +120,5 @@ class AdminUsersController extends Controller
         User::destroy($user->id);
 
         return redirect('/dashboard/users')->with('success', 'User has been deleted');
-
     }
 }
