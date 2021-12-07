@@ -202,7 +202,7 @@
         padding-left: 60px;
     }
 
-    .nav-link:hover::after {
+    .border-nav:hover::after {
         content: "";
         display: block;
         border-bottom: 3px solid #5243b8;
