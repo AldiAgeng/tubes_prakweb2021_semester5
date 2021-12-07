@@ -8,15 +8,37 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" href="/">Home</a>
+            <a class="nav-link border-nav {{ Request::is('/*') ? 'active' : '' }}" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts">Blog</a>
+            <a class="nav-link border-nav {{ Request::is('posts*') ? 'active' : '' }}" href="/posts">Blog</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{ Request::is('login*') ? 'active' : '' }}" href="/login">Login</a>
-          </li>
-        </ul>
+            @auth
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Welcome back, {{ auth()->user()->name }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <form action="/logout" method="post">
+                      @csrf
+                      <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                    </form>
+                  </li>
+                </ul>
+            @else
+              <li class="nav-item">
+                <a href="/login" class="nav-link {{ ($title === "login") ? 'active' : ''}}"><i class="bi bi-box-arrow-right"></i> Login</a>
+              </li>
+            @endauth
+          </ul>
+
+
+
+
+        
         <form action="/posts" class="d-flex search">
           
           @if (request('category'))
