@@ -94,10 +94,15 @@ class AdminUsersController extends Controller
             'is_admin' => 'required'
         ];
 
-        if ($request->username != $user->usename && $request->email != $user->email) {
+        if ($request->username != $user->username) {
             $rules = [
-                'username' => ['required', 'min:3', 'max:255', 'unique:users'],
-                'email' => 'required|email:dns|unique:users',
+                'username' => ['required', 'min:3', 'max:255', 'unique:users']
+            ];
+        }
+
+        if($request->email != $user->email){
+            $rules = [
+                'email' => 'required|email:dns|unique:users'
             ];
         }
 
