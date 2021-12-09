@@ -183,6 +183,16 @@
     background-color: #5243b8;
 }
 
+@media screen and (max-width: 767px) {
+    .new-review {
+        text-align: center;
+    }
+
+    .team-area {
+        margin-left: 22px;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .kotak {
         width: 572px;
@@ -199,7 +209,7 @@
     }
 
     .nav-item {
-        padding-left: 60px;
+        padding-left: 35px;
     }
 
     .border-nav:hover::after {
