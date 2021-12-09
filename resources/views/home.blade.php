@@ -53,7 +53,7 @@
             <div class="team-area mt-4 justify-content-center">
                 <div class="single-team">
                   @if ($posts[1]->image)
-                    <img src="{{ asset('storage/' .$posts[1]->image) }}" alt="{{ $post->category->name }}" class="float-start" alt="{{ $posts[1]->category->name }}">
+                    <img src="{{ asset('storage/' .$posts[1]->image) }}" alt="{{ $posts->category->name }}" class="float-start" alt="{{ $posts[1]->category->name }}">
                   @else
                     <img src="https://source.unsplash.com/500x400?{{ $posts[1]->category->name }}" alt="{{ $posts[1]->category->name }}">
                   @endif
