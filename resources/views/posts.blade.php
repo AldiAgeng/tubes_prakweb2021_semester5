@@ -30,8 +30,13 @@
   <p class="text-center fs-4">No Post Found.</p>
 @endif
 
-<div class="d-flex justify-content-end">
-  {{ $posts->links() }}
+
+
+
+<div class="d-flex justify-content-center mt-5">
+  <div class="pagination">
+    {{ $posts->links() }}
+  </div>
 </div>
 
 @endsection
