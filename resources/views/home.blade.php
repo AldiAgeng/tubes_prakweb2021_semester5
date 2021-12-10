@@ -17,7 +17,7 @@
     </div>
     @endif
 
-    <div class="col-sm-6 keterangan">
+    <div class="col-sm-6 keterangan mt-2">
       <h1 class="fw-bold">Review {{ $posts[0]->title }}</h1>
       <ul class="mt-4 fw-bold">
         <li><i class="bi bi-calendar3"></i> {{ $posts[0]->created_at->diffForHumans() }}</li>
@@ -36,7 +36,7 @@
 {{-- Category --}}
 <div class="container mt-5">
 <div class="row body">
-  <h1>Browse by category</h1>
+  <h1 class="category">Browse by category</h1>
   <div class="col-sm-4 category mt-3">
     @foreach ($categories as $category)
     <a href="/posts?category={{ $category->slug }}" type="button" class="btn">{{ $category->name }}</a>
