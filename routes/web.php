@@ -11,6 +11,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\AdminAllPostsController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardMyProfileController;
 use App\Http\Controllers\DashboardPostController;
 
 /*
@@ -73,3 +74,5 @@ Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except(
 
 Route::resource('/dashboard/users', AdminUsersController::class)->except('show')->middleware('admin');
 
+Route::get('/dashboard/myprofile', [DashboardMyProfileController::class, 'index']);
+Route::put('/dashboard/myprofile/{username}', [DashboardMyProfileController::class, 'update']);
