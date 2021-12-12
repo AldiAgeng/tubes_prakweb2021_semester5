@@ -11,7 +11,7 @@
 @endif
 
 <div class="col-md-8">
-    <form method="post" action="/dashboard/myprofile/{{ auth()->user()->username }}" class="mb-5">
+    <form method="post" action="/dashboard/myprofile/edit/{{ auth()->user()->username }}" class="mb-5">
       @method('put')
       @csrf
         <div class="mb-3">
@@ -55,8 +55,9 @@
 
           
           
-      <button type="submit" class="btn btn-primary">Update MyProfile</button>
-    </form>
+          <button type="submit" class="btn btn-success">Save</button>
+          <a href="/dashboard/myprofile" class="btn btn-dark">Cancel</a>
+        </form>
 </div>
 
 @endsection

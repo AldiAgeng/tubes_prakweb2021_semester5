@@ -75,4 +75,5 @@ Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except(
 Route::resource('/dashboard/users', AdminUsersController::class)->except('show')->middleware('admin');
 
 Route::get('/dashboard/myprofile', [DashboardMyProfileController::class, 'index']);
-Route::put('/dashboard/myprofile/{username}', [DashboardMyProfileController::class, 'update']);
+Route::get('/dashboard/myprofile/edit/{username}', [DashboardMyProfileController::class, 'edit']);
+Route::put('/dashboard/myprofile/edit/{username}', [DashboardMyProfileController::class, 'update']);
