@@ -1,6 +1,12 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3">
     <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link">
+              <img style="height: 60; width: 60;" class="img-responsive rounded-circle" src="https://i.pravatar.cc/60">
+              {{ auth()->user()->name }}
+            </a>
+          </li>
       <li class="nav-item">
         <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
           <span data-feather="home"></span>
@@ -8,7 +14,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/myprofile') ? 'active' : '' }}" aria-current="page" href="/dashboard/myprofile">
+        <a class="nav-link {{ Request::is('dashboard/myprofile*') ? 'active' : '' }}" aria-current="page" href="/dashboard/myprofile">
           <span data-feather="user"></span>
           MyProfile
         </a>
