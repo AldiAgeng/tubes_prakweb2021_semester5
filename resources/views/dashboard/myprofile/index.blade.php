@@ -13,7 +13,6 @@
 
 
 <div class="col-md-8">
-  <img style="height: 200; width: 200;" class="img-responsive rounded-circle" src="https://i.pravatar.cc/200">
   <div class="mb-3 mt-3">
     <a href="/dashboard/myprofile/edit" class="btn btn-primary mb-2">Edit MyProfile</a>
     <a href="/dashboard/myprofile/password/edit" class="btn btn-primary mb-2">Change Password</a>
