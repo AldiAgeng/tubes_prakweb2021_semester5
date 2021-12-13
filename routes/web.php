@@ -11,6 +11,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\AdminAllPostsController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardChangePasswordController;
 use App\Http\Controllers\DashboardMyProfileController;
 use App\Http\Controllers\DashboardPostController;
 
@@ -75,5 +76,8 @@ Route::resource('/dashboard/all_posts', AdminAllPostsController::class)->except(
 Route::resource('/dashboard/users', AdminUsersController::class)->except('show')->middleware('admin');
 
 Route::get('/dashboard/myprofile', [DashboardMyProfileController::class, 'index']);
-Route::get('/dashboard/myprofile/edit/{username}', [DashboardMyProfileController::class, 'edit']);
+Route::get('/dashboard/myprofile/edit', [DashboardMyProfileController::class, 'edit']);
 Route::put('/dashboard/myprofile/edit/{username}', [DashboardMyProfileController::class, 'update']);
+
+Route::get('/dashboard/myprofile/password/edit', [DashboardChangePasswordController::class, 'edit']);
+Route::put('/dashboard/myprofile/password/edit', [DashboardChangePasswordController::class, 'update']);
