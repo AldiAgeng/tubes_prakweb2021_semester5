@@ -3,7 +3,11 @@
     <ul class="nav flex-column">
         <li class="nav-item">
             <a class="nav-link">
-              <img style="height: 60; width: 60;" class="img-responsive rounded-circle" src="https://i.pravatar.cc/60">
+                @if(auth()->user()->avatar==null)
+                <img style="height: 60px; width: 60px;" class="img-responsive rounded-circle" src="https://i.pravatar.cc/60">
+                @else
+                <img style="height: 60px; width: 60px;" class="img-responsive rounded-circle" src="{{ asset('storage/' .auth()->user()->avatar) }}">
+                @endif
               {{ auth()->user()->name }}
             </a>
           </li>
