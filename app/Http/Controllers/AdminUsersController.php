@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class AdminUsersController extends Controller
 {
@@ -122,6 +123,10 @@ class AdminUsersController extends Controller
      */
     public function destroy(User $user)
     {
+        if($user->avatar){
+            Storage::delete($user->avatar);
+        }
+
         User::destroy($user->id);
 
         return redirect('/dashboard/users')->with('success', 'User has been deleted');
