@@ -13,6 +13,11 @@
 
 
 <div class="col-md-8">
+  @if(auth()->user()->avatar==null)
+  <h5>No Image, Please upload your image</h5>
+  @else
+  <img style="height: 150px; width: 150px;" class="img-responsive rounded-circle" src="{{ asset('storage/' .auth()->user()->avatar) }}">
+  @endif
   <div class="mb-3 mt-3">
     <a href="/dashboard/myprofile/edit" class="btn btn-primary mb-2">Edit MyProfile</a>
     <a href="/dashboard/myprofile/password/edit" class="btn btn-primary mb-2">Change Password</a>
@@ -28,7 +33,19 @@
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <p class="form-control" id="email" name="email">{{ auth()->user()->email }}</p>
-          </div>
+        </div>
+        
+        @if(!auth()->user()->bio==null)
+        <div class="mb-3">
+            <label for="bio" class="form-label">Bio</label>
+            <p class="form-control" id="bio" name="bio">{{ auth()->user()->bio }}</p>
+        </div>
+        @else
+        <div class="mb-3">
+              <label for="bio" class="form-label">Bio</label>
+              <p class="form-control" id="bio" name="bio">No Bio</p>
+        </div>
+        @endif
 </div>
 
 @endsection
