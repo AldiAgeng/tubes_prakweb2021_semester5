@@ -54,9 +54,23 @@
           Users
         </a>
     </ul>
-
     
     @endcan
+
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+      <span>______________</span>
+    </h6>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <form action="/logout" method="post">
+          @csrf
+          <button type="submit" class="text-decoration-none bg-white nav-link px-3 border-0"><span data-feather="log-out"></span> Logout</button>
+        </form>
+      </li>
+    </ul>
+
+    
+    
 
   </div>
 </nav>
