@@ -35,11 +35,19 @@
     <h1 class="title-related-posts mb-3 mt-3">About Author</h1>
     <div class="row justify-content-center g-0 about-author mt-3">
       <div class="col-md-2 ">
-        <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="">
+        @if($post->author->avatar==null)
+        <img class="rounded-circle" src="https://i.pravatar.cc/150" alt="">
+        @else
+        <img style="width:150px; heigth:150px;" class="rounded-circle" src="{{ asset('storage/' .$post->author->avatar) }}" alt="">
+        @endif
       </div>
       <div class="col-md-6 about-text-author float-start">
-        <p class="p-author pt-5"><b>{{ $post->author->name }}</b></p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, veritatis earum. Excepturi tempore beatae consectetur ratione nostrum iusto quo officiis, sapiente ad! Ducimus, sint cum?</p>
+        <p class="p-author pt-2 fw-bold" style="font-size: 25px;">{{ $post->author->name }}</p>
+        @if($post->author->bio)
+        <p>{{ $post->author->bio }}</p>
+        @else
+        <p>No Bio</p>
+        @endif
       </div>
     </div>
   </div>
