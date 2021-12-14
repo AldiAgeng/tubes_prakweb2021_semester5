@@ -22,7 +22,7 @@ class DashboardMyProfileController extends Controller
         
         $validate = $request->validate([
             'name' => ['required','max:24'],
-            'bio' => ['required','max:255'],
+            'bio' => ['required'],
             'avatar' => 'image|file|max:1024',
             'username' => ['required', 'min:3', 'max:255', 'unique:users,username,' . auth()->user()->id],
             'email' => ['required', 'email:dns', 'unique:users,email,' . auth()->user()->id]
