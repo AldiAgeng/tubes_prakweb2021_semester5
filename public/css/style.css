@@ -210,6 +210,38 @@
     margin-left: 10px;
 }
 
+.text-detail p {
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.text-detail p span {
+    font-weight: bold;
+}
+
+.post h1 {
+    font-weight: 700;
+}
+
+.text-body {
+    text-align: justify;
+}
+
+.card {
+    width: 60%;
+}
+
+.about-text-author p {
+    padding-left: 20px;
+}
+
+.detail-post-title {
+    background-color: #5243b8;
+    height: 140px;
+}
+
 @media screen and (max-width: 767px) {
     .gambar img {
         width: 340px;
@@ -224,6 +256,24 @@
 
     .team-area {
         margin-left: 22px;
+    }
+
+    .title-related-posts,
+    .related-posts .card {
+        margin-top: 10px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .section-about-author img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .section-about-author p {
+        text-align: center;
     }
 }
 
@@ -330,5 +380,21 @@
 
     .body {
         margin-left: 20px;
+    }
+
+    .title-related-posts,
+    .related-posts .card {
+        margin-left: 220px;
+    }
+
+
+    .title-related-posts h1 {
+        width: 300px;
+        border-bottom: 5px solid #5243b8;
+    }
+
+
+    .card {
+        width: 100%;
     }
 }
