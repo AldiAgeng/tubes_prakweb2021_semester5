@@ -25,7 +25,7 @@ class PostController extends Controller
 
         return view('posts', [
             'title' => 'All Posts ' . $title,
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(9)->withQueryString()
+            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(12)->withQueryString()
         ]);
     }
 
@@ -33,7 +33,8 @@ class PostController extends Controller
     {
         return view('post', [
             'title' => 'Single Post',
-            'post' => $post
+            'post' => $post,
+            'related' => Post::where('category_id', '=', $post->category->id)->where('id', '!=', $post->id)->get()
         ]);
     }
 }

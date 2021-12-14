@@ -40,7 +40,6 @@
 						<ul class="list-unstyled">
               <li><a href="/" class="py-1 d-block">Home</a></li>
               <li><a href="/posts" class="py-1 d-block">Blog</a></li>
-              <li><a href="/categories" class="py-1 d-block">Category</a></li>
             </ul>
 					</div>
 				</div>

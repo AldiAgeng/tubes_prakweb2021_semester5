@@ -164,7 +164,7 @@
 .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('/img/login-img.jpg');
+    background: scroll center url("/img/login-img.jpg");
     background-size: cover;
 }
 
@@ -183,7 +183,6 @@
     background-color: #5243b8;
 }
 
-
 .page-link {
     position: relative;
     display: block;
@@ -200,8 +199,7 @@
     border-color: #024dbc;
 }
 
-
-.pagination>.active>a {
+.pagination > .active > a {
     background: #5243b8 !important;
 }
 
@@ -239,7 +237,7 @@
 
 .detail-post-title {
     background-color: #5243b8;
-    height: 140px;
+    height: 139px;
 }
 
 @media screen and (max-width: 767px) {
@@ -305,8 +303,6 @@
         padding-bottom: 5px;
         margin-bottom: -8px;
     }
-
-
 
     .search {
         padding-right: 270px;
@@ -387,12 +383,10 @@
         margin-left: 220px;
     }
 
-
     .title-related-posts h1 {
         width: 300px;
         border-bottom: 5px solid #5243b8;
     }
-
 
     .card {
         width: 100%;
