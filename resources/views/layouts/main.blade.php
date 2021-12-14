@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/footer.css">
 
+    <link rel="icon" href="{{ URL::asset('/img/favicon.ico') }}" type="image/x-icon"/>
+
     <title>MovieLab | {{ $title }}</title>
   </head>
   <body>
