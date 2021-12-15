@@ -1,7 +1,7 @@
 <div style="z-index: -999;" class="kotak"></div>
   <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong">
     <div class="container-fluid mt-3 mb-1">
-      <a class="navbar-brand" href="/">MovieLab</a>
+      <a class="navbar-brand" href="/"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,3 +53,12 @@
       </div>
     </div>
   </nav>
+  
+  <script>
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.navbar-brand', {
+      duration: 2,
+      delay: 1.5,
+      text: 'MovieLab'
+      });
+  </script>

@@ -17,6 +17,15 @@
 
     <link rel="icon" href="{{ URL::asset('/img/favicon.ico') }}" type="image/x-icon"/>
 
+    {{-- GSAP --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    {{-- GSAP TEXT --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    {{-- GSAP SCROLL --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
     <title>MovieLab | {{ $title }}</title>
   </head>
   <body>

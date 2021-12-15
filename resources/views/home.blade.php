@@ -104,4 +104,23 @@
 
 <!-- Footer -->
 
+<script>
+  gsap.from(".gambar", {
+    duration:2,
+    x: -190,
+    ease: 'elastic.out(2, 0.5)',
+    opacity: 0, 
+    scale: 0.5
+    });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.single-team', {
+    scrollTrigger: '.single-team',
+    x: -400,
+    duration: 3,
+    scale: 0.5,
+    opacity: 0,
+  });
+</script>
+
 @endsection
