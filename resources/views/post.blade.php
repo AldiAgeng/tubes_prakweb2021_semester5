@@ -66,13 +66,20 @@
     <div class="card mb-3" style="max-width: 840px;">
       <div class="row justify-content-center g-0">
         <div class="col-sm-4">
-          <img src="https://source.unsplash.com/1200x900?Documentary" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-sm-8">
-          <div class="card-body">
             <?php 
             $random = $related->random()
             ?>
+            
+          @if($random->image)
+          <img src="{{ asset('storage/' .$random->image) }}" class="img-fluid rounded-start" alt="...">
+          @else
+          <img src="https://source.unsplash.com/1200x900?{{ $random->category->name }}" class="img-fluid rounded-start" alt="...">
+          @endif
+          
+        </div>
+        <div class="col-sm-8">
+          <div class="card-body">
+            
             <a  class="text-decoration-none text-dark" href="/posts/{{ $random->slug }}"><h5 class="card-title">{{ $random->title }}</h5></a>
             <p class="card-text">{{ $random->excerpt }}</p>
             <p class="card-text"><small class="text-muted">{{ $random->created_at->diffForHumans() }}</small></p>
