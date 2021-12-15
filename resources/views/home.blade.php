@@ -18,7 +18,7 @@
     @endif
 
     <div class="col-sm-6 keterangan mt-2">
-      <h1 class="fw-bold">Review {{ $posts[0]->title }}</h1>
+      <h1 class="fw-bold">{{ $posts[0]->title }}</h1>
       <ul class="mt-4 fw-bold">
         <li><i class="bi bi-calendar3"></i> {{ $posts[0]->created_at->diffForHumans() }}</li>
         <li><a class="text-decoration-none text-dark" href="/posts?author={{ $posts[0]->author->username }}"><i class="bi bi-people"></i> {{ $posts[0]->author->name }}</a></li>
@@ -58,7 +58,7 @@
                     <img src="https://source.unsplash.com/500x400?{{ $posts[1]->category->name }}" alt="{{ $posts[1]->category->name }}">
                   @endif
                   <div class="team-text">
-                    <h2>Review {{ $posts[1]->title }}</h2>
+                    <h2>{{ $posts[1]->title }}</h2>
                     <p>{{ $posts[1]->category->name }}</p>
                     <a href="/posts/{{ $posts[1]->slug }}" class="button text-decoration-none p-2">Read More</a>
                   </div>
@@ -74,7 +74,7 @@
                   <img src="https://source.unsplash.com/500x400?{{ $posts[2]->category->name }}" alt="{{ $posts[2]->category->name }}">
                 @endif
                 <div class="team-text">
-                  <h2>Review {{ $posts[2]->title }}</h2>
+                  <h2>{{ $posts[2]->title }}</h2>
                   <p>{{ $posts[2]->category->name }}</p>
                   <a href="/posts/{{ $posts[2]->slug }}" class="button text-decoration-none p-2">Read More</a>
                 </div>
@@ -90,7 +90,7 @@
                 <img src="https://source.unsplash.com/500x400?{{ $posts[3]->category->name }}" alt="{{ $posts[3]->category->name }}">
               @endif
               <div class="team-text">
-                <h2>Review {{ $posts[3]->title }}</h2>
+                <h2>{{ $posts[3]->title }}</h2>
                 <p>{{ $posts[3]->category->name }}</p>
                 <a href="/posts/{{ $posts[3]->slug }}" class="button text-decoration-none p-2">Read More</a>
               </div>
