@@ -37,7 +37,7 @@
 <div class="container mt-5">
 <div class="row body">
   <h1 class="category">Browse by category</h1>
-  <div class="col-sm-4 category mt-3">
+  <div class="col-sm-11 category mt-3">
     @foreach ($categories as $category)
     <a href="/posts?category={{ $category->slug }}" type="button" class="btn">{{ $category->name }}</a>
     @endforeach

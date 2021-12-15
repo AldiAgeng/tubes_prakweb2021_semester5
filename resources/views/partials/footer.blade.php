@@ -21,9 +21,9 @@
 					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
 						<h2 class="footer-heading">Categories</h2>
 						<ul class="list-unstyled">
-              <li><a href="/posts?category=Animation" class="py-1 d-block">Animation</a></li>
-              <li><a href="/posts?category=Documentary" class="py-1 d-block">Documentary</a></li>
-              <li><a href="/posts?category=Family" class="py-1 d-block">Family</a></li>
+							@foreach (App\Models\Category::all() as $category)
+              <li><a href="/posts?category={{ $category->slug }}" class="py-1 d-block">{{ $category->name }}</a></li>
+							@endforeach
             </ul>
 					</div>
 					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
