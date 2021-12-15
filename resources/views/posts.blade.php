@@ -16,7 +16,7 @@
                   <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}" alt="{{ $post->category->name }}">
                 @endif
                 <div class="team-text">
-                  <h2>Review {{ $post->title }}</h2>
+                  <h2>{{ $post->title }}</h2>
                   <p>{{ $post->category->name }}</p>
                   <a href="/posts/{{ $post->slug }}" class="button text-decoration-none p-2">Read More</a>
                 </div>
