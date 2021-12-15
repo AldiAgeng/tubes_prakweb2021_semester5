@@ -58,6 +58,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/dashboard', function () {
     return view('dashboard.index', [
         'posts' => Post::all(),
+        'title' => 'Dashboard',
         'categories' => Category::all(),
         'user' => User::all()->where('is_admin', 0),
         'admin' => User::all()->where('is_admin', 1)

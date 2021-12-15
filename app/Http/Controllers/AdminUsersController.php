@@ -18,7 +18,8 @@ class AdminUsersController extends Controller
     public function index()
     {
         return view('dashboard.users.index', [
-            'users' => User::all()
+            'users' => User::all(),
+            'title' => 'Users'
         ]);
     }
 
@@ -29,7 +30,9 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
-        return view('dashboard.users.create');
+        return view('dashboard.users.create',[
+            'title' => 'Users'
+        ]);
     }
 
     /**
@@ -77,7 +80,8 @@ class AdminUsersController extends Controller
     public function edit(User $user)
     {
         return view('dashboard.users.edit', [
-            'user' => $user
+            'user' => $user,
+            'title' => 'Users'
         ]);
     }
 
