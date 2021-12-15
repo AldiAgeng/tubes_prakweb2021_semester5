@@ -9,7 +9,9 @@ use Illuminate\Validation\ValidationException;
 class DashboardChangePasswordController extends Controller
 {
     public function edit(){
-        return view('dashboard.myprofile.password.edit');
+        return view('dashboard.myprofile.password.edit',[
+            'title' => 'MyProfile'
+        ]);
     }
 
     public function update(Request $request){

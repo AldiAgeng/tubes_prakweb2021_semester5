@@ -22,7 +22,8 @@ class AdminAllPostsController extends Controller
     public function index()
     {
         return view('dashboard.all_posts.index', [
-            'posts' => Post::all()
+            'posts' => Post::all(),
+            'title' => 'All Posts'
         ]);
     }
 
@@ -68,7 +69,8 @@ class AdminAllPostsController extends Controller
     {
         return view('dashboard.all_posts.edit', [
             'all_post' => $all_post,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'title' => 'All Posts'
         ]);
     }
 

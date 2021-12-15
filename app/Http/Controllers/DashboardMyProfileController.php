@@ -11,11 +11,15 @@ use Illuminate\Support\Facades\Storage;
 class DashboardMyProfileController extends Controller
 {
     public function index(){
-        return view('dashboard.myprofile.index');
+        return view('dashboard.myprofile.index',[
+            'title' => 'MyProfile'
+        ]);
     }
 
     public function edit(){
-        return view('dashboard.myprofile.edit');
+        return view('dashboard.myprofile.edit',[
+            'title' => 'MyProfile'
+        ]);
     }
 
     public function update(Request $request){

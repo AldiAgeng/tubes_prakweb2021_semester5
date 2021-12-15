@@ -17,7 +17,8 @@ class AdminCategoryController extends Controller
     public function index()
     {
         return view('dashboard.categories.index', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'title' => 'Categories'
         ]);
     }
 
@@ -28,7 +29,9 @@ class AdminCategoryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.categories.create');
+        return view('dashboard.categories.create',[
+            'title' => 'Categories'
+        ]);
     }
 
     /**
@@ -69,7 +72,8 @@ class AdminCategoryController extends Controller
     public function edit(Category $category)
     {
         return view('dashboard.categories.edit',[
-            'categories' => $category
+            'categories' => $category,
+            'title' => 'Categories'
         ]);
     }
 
